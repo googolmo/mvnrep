@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.googolmo.utils</groupId>
+  <artifactId>Androrm</artifactId>
+  <versioning>
+    <versions>
+      <version>0.3.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20121020120007</lastUpdated>
+  </versioning>
+</metadata>
