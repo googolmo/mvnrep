@@ -3,22 +3,27 @@ function regExpMatch(url, pattern) {
 }
 
 function FindProxyForURL(url, host) {
-	if (shExpMatch(url, "*://autoproxy-gfwlist.googlecode.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "https://ssl.gstatic.com/*")) return 'DIRECT';
-	if (shExpMatch(url, "*://docs.google.com/*")) return 'DIRECT';
+	if (shExpMatch(url, "*://autoproxy-gfwlist.googlecode.com/*")) return 'PROXY 127.0.0.1:8087';
 	if (shExpMatch(url, "*://talkgadget.google.com/*")) return 'DIRECT';
-	if (shExpMatch(url, "*.futureai.jp/*") || shExpMatch(url, "*://futureai.jp/*")) return 'DIRECT';
-	if (shExpMatch(url, "*.flickr.com/*") || shExpMatch(url, "*://flickr.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*.staticflickr.com/*") || shExpMatch(url, "*://staticflickr.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://twitpic.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://www.google-analytics.com/*")) return 'DIRECT';
-	if (shExpMatch(url, "*://www.missdeer.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://via.me/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "https://www.google.com/*")) return 'DIRECT';
-	if (shExpMatch(url, "https://*.googleusercontent.com/*") || shExpMatch(url, "https://googleusercontent.com/*")) return 'DIRECT';
-	if (shExpMatch(url, "*://bitly.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://api.twitter.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.tweetdeck.com/*") || shExpMatch(url, "*://tweetdeck.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*://docs.google.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*://passport.360buy.com/*")) return 'DIRECT';
+	if (shExpMatch(url, "*://plus.url.google.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.blogspot.jp/*") || shExpMatch(url, "*://blogspot.jp/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*://www.tumblr.com/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*://bitly.com/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*.blogspot.co.uk/*") || shExpMatch(url, "*://blogspot.co.uk/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*://golang.org/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*://www.google.com/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*.futureai.jp/*") || shExpMatch(url, "*://futureai.jp/*")) return 'DIRECT';
+	if (shExpMatch(url, "*.flickr.com/*") || shExpMatch(url, "*://flickr.com/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*.staticflickr.com/*") || shExpMatch(url, "*://staticflickr.com/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*://twitpic.com/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*.golang.org/*") || shExpMatch(url, "*://golang.org/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*://www.missdeer.com/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*://via.me/*")) return 'PROXY 127.0.0.1:8087';
+	if (shExpMatch(url, "*stream.twitter.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?www\\.exblog\\.jp")) return 'DIRECT';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?.*v6\\.facebook\\.com")) return 'DIRECT';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?bak\\.gun-world\\.net")) return 'DIRECT';
