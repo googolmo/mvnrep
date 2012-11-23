@@ -5,20 +5,20 @@
   <version>1.4.2-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20121123.054709</timestamp>
-      <buildNumber>1</buildNumber>
+      <timestamp>20121123.075210</timestamp>
+      <buildNumber>3</buildNumber>
     </snapshot>
-    <lastUpdated>20121123054709</lastUpdated>
+    <lastUpdated>20121123075210</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>apklib</extension>
-        <value>1.4.2-20121123.054709-1</value>
-        <updated>20121123054709</updated>
+        <value>1.4.2-20121123.075210-3</value>
+        <updated>20121123075210</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.4.2-20121123.054709-1</value>
-        <updated>20121123054709</updated>
+        <value>1.4.2-20121123.075210-3</value>
+        <updated>20121123075210</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
