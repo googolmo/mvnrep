@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.slidingmenu</groupId>
+  <artifactId>librarywithsherlock</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.2-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130107132655</lastUpdated>
+  </versioning>
+</metadata>
