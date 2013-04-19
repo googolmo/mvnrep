@@ -5,7 +5,6 @@ PROXY 10.8.0.1:8118
 function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*.googlecode.com/*") || shExpMatch(url, "*://googlecode.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.godaddy.com/*") || shExpMatch(url, "*://godaddy.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*.v2ex.com/*") || shExpMatch(url, "*://v2ex.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.google-analytics.com/*") || shExpMatch(url, "*://google-analytics.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://zh.wikipedia.org/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.appspot.com/*") || shExpMatch(url, "*://appspot.com/*")) return 'PROXY 10.8.0.1:8118';
