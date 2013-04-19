@@ -1,7 +1,7 @@
 function regExpMatch(url, pattern) {
 	try { return new RegExp(pattern).test(url); } catch(ex) { return false; }
 }
-PROXY 10.8.0.1:8118
+
 function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*.googlecode.com/*") || shExpMatch(url, "*://googlecode.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.godaddy.com/*") || shExpMatch(url, "*://godaddy.com/*")) return 'PROXY 10.8.0.1:8118';

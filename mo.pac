@@ -1,7 +1,7 @@
 function regExpMatch(url, pattern) {
 	try { return new RegExp(pattern).test(url); } catch(ex) { return false; }
 }
-SOCKS5 127.0.0.1:1080
+
 function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*.googlecode.com/*") || shExpMatch(url, "*://googlecode.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*://zh.wikipedia.org/*")) return 'SOCKS5 127.0.0.1:1080';
