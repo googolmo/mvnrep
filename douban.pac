@@ -3,30 +3,30 @@ function regExpMatch(url, pattern) {
 }
 
 function FindProxyForURL(url, host) {
+	if (shExpMatch(url, "*.talk.google.com/*") || shExpMatch(url, "*://talk.google.com/*")) return 'DIRECT';
 	if (shExpMatch(url, "*.googlecode.com/*") || shExpMatch(url, "*://googlecode.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.godaddy.com/*") || shExpMatch(url, "*://godaddy.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.v2ex.com/*") || shExpMatch(url, "*://v2ex.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.google-analytics.com/*") || shExpMatch(url, "*://google-analytics.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://zh.wikipedia.org/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.wikipedia.org/*") || shExpMatch(url, "*://wikipedia.org/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.appspot.com/*") || shExpMatch(url, "*://appspot.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.ingress.com/*") || shExpMatch(url, "*://ingress.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.akamaihd.net/*") || shExpMatch(url, "*://akamaihd.net/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://accounts.youtube.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.googleapis.com/*") || shExpMatch(url, "*://googleapis.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.wretch.cc/*") || shExpMatch(url, "*://wretch.cc/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://t.co/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.gstatic.com/*") || shExpMatch(url, "*://gstatic.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://code.google.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://golang.org/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://*.golang.org/*") || shExpMatch(url, "*://golang.org/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.golang.org/*") || shExpMatch(url, "*://golang.org/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://gongm.in/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.android.com/*") || shExpMatch(url, "*://android.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.openvpn.net/*") || shExpMatch(url, "*://openvpn.net/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.blogspot.com/*") || shExpMatch(url, "*://blogspot.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://groups.google.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://img.ly/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://igfw.net/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://dl.google.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://idlesun.wordpress.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://bit.ly/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.wordpress.com/*") || shExpMatch(url, "*://wordpress.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.bit.ly/*") || shExpMatch(url, "*://bit.ly/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.googleusercontent.com/*") || shExpMatch(url, "*://googleusercontent.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.twitter.com/*") || shExpMatch(url, "*://twitter.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.ytimg.com/*") || shExpMatch(url, "*://ytimg.com/*")) return 'PROXY 10.8.0.1:8118';
@@ -36,12 +36,12 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*.sourceforge.net/*") || shExpMatch(url, "*://sourceforge.net/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.akamai.net/*") || shExpMatch(url, "*://akamai.net/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.blogspot.jp/*") || shExpMatch(url, "*://blogspot.jp/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://trello.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.trello.com/*") || shExpMatch(url, "*://trello.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.ggpht.com/*") || shExpMatch(url, "*://ggpht.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.wordpress.com/*") || shExpMatch(url, "*://wordpress.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://itunes.apple.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://www.facebook.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://www.dropbox.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.apple.com/*") || shExpMatch(url, "*://apple.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.facebook.com/*") || shExpMatch(url, "*://facebook.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.dropbox.com/*") || shExpMatch(url, "*://dropbox.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.google.com/*") || shExpMatch(url, "*://google.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "https://autoproxy.org*")) return 'DIRECT';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?www\\.exblog\\.jp")) return 'DIRECT';
@@ -3169,6 +3169,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?penchinese\\.net")) return 'PROXY 10.8.0.1:8118';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blog\\.pentalogic\\.net")) return 'PROXY 10.8.0.1:8118';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?peopo\\.org")) return 'PROXY 10.8.0.1:8118';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?perlhowto\\.com")) return 'PROXY 10.8.0.1:8118';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?photofocus\\.com")) return 'PROXY 10.8.0.1:8118';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?img.*\\.picturedip\\.com")) return 'PROXY 10.8.0.1:8118';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?pin6\\.com")) return 'PROXY 10.8.0.1:8118';
