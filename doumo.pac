@@ -4,10 +4,10 @@ function regExpMatch(url, pattern) {
 
 function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*.talk.google.com/*") || shExpMatch(url, "*://talk.google.com/*")) return 'DIRECT';
-	if (shExpMatch(url, "*.googlecode.com/*") || shExpMatch(url, "*://googlecode.com/*")) return 'PROXY 127.0.0.1:48100';
+	if (shExpMatch(url, "*.googlecode.com/*") || shExpMatch(url, "*://googlecode.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.godaddy.com/*") || shExpMatch(url, "*://godaddy.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.v2ex.com/*") || shExpMatch(url, "*://v2ex.com/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*.google-analytics.com/*") || shExpMatch(url, "*://google-analytics.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.google-analytics.com/*") || shExpMatch(url, "*://google-analytics.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.wikipedia.org/*") || shExpMatch(url, "*://wikipedia.org/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.appspot.com/*") || shExpMatch(url, "*://appspot.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.ingress.com/*") || shExpMatch(url, "*://ingress.com/*")) return 'PROXY 10.8.0.1:8118';
@@ -24,7 +24,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*.blogspot.com/*") || shExpMatch(url, "*://blogspot.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://img.ly/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*://igfw.net/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*://dl.google.com/*")) return 'PROXY 127.0.0.1:48100';
+	if (shExpMatch(url, "*://dl.google.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.wordpress.com/*") || shExpMatch(url, "*://wordpress.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.bit.ly/*") || shExpMatch(url, "*://bit.ly/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.googleusercontent.com/*") || shExpMatch(url, "*://googleusercontent.com/*")) return 'PROXY 10.8.0.1:8118';
