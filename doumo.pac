@@ -27,7 +27,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*://dl.google.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.wordpress.com/*") || shExpMatch(url, "*://wordpress.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.bit.ly/*") || shExpMatch(url, "*://bit.ly/*")) return 'PROXY 10.8.0.1:8118';
-	if (shExpMatch(url, "*.googleusercontent.com/*") || shExpMatch(url, "*://googleusercontent.com/*")) return 'PROXY 10.8.0.1:8118';
+	if (shExpMatch(url, "*.googleusercontent.com/*") || shExpMatch(url, "*://googleusercontent.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.twitter.com/*") || shExpMatch(url, "*://twitter.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.ytimg.com/*") || shExpMatch(url, "*://ytimg.com/*")) return 'PROXY 10.8.0.1:8118';
 	if (shExpMatch(url, "*.youtube.com/*") || shExpMatch(url, "*://youtube.com/*")) return 'PROXY 10.8.0.1:8118';
