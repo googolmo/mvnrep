@@ -12,22 +12,31 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*.appspot.com/*") || shExpMatch(url, "*://appspot.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.ingress.com/*") || shExpMatch(url, "*://ingress.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.akamaihd.net/*") || shExpMatch(url, "*://akamaihd.net/*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "*.youtube.com/*") || shExpMatch(url, "*://accounts.youtube.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*://accounts.youtube.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.googleapis.com/*") || shExpMatch(url, "*://googleapis.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "https://www.cloudcontrol.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.wretch.cc/*") || shExpMatch(url, "*://wretch.cc/*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "*://t.co/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.t.co/*") || shExpMatch(url, "*://t.co/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.gstatic.com/*") || shExpMatch(url, "*://gstatic.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.linode.com/*") || shExpMatch(url, "*://linode.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*://tweets.seraph.me/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.golang.org/*") || shExpMatch(url, "*://golang.org/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.googlesource.com/*") || shExpMatch(url, "*://googlesource.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.flickr.com/*") || shExpMatch(url, "*://flickr.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.yimg.com/*") || shExpMatch(url, "*://yimg.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*://gongm.in/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.android.com/*") || shExpMatch(url, "*://android.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.openvpn.net/*") || shExpMatch(url, "*://openvpn.net/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.blogspot.com/*") || shExpMatch(url, "*://blogspot.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.dapps.douban.com/*") || shExpMatch(url, "*://dapps.douban.com/*")) return 'DIRECT';
 	if (shExpMatch(url, "*://img.ly/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*://igfw.net/*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "*://dl.google.com/*")) return 'PROXY 127.0.0.1:48100';
+	if (shExpMatch(url, "*://dl.google.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.wordpress.com/*") || shExpMatch(url, "*://wordpress.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.bit.ly/*") || shExpMatch(url, "*://bit.ly/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.intra.douban.com/*") || shExpMatch(url, "*://intra.douban.com/*")) return 'DIRECT';
 	if (shExpMatch(url, "*.googleusercontent.com/*") || shExpMatch(url, "*://googleusercontent.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.grepcode.com/*") || shExpMatch(url, "*://grepcode.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.twitter.com/*") || shExpMatch(url, "*://twitter.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.ytimg.com/*") || shExpMatch(url, "*://ytimg.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.youtube.com/*") || shExpMatch(url, "*://youtube.com/*")) return 'SOCKS5 127.0.0.1:1080';
@@ -37,7 +46,11 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "*.akamai.net/*") || shExpMatch(url, "*://akamai.net/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.blogspot.jp/*") || shExpMatch(url, "*://blogspot.jp/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.trello.com/*") || shExpMatch(url, "*://trello.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.cloudfront.net/*") || shExpMatch(url, "*://cloudfront.net/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.google.cn/*") || shExpMatch(url, "*://google.cn/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.ggpht.com/*") || shExpMatch(url, "*://ggpht.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.xda-developers.com/*") || shExpMatch(url, "*://xda-developers.com/*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "*.googlegroups.com/*") || shExpMatch(url, "*://googlegroups.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.wordpress.com/*") || shExpMatch(url, "*://wordpress.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.apple.com/*") || shExpMatch(url, "*://apple.com/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "*.facebook.com/*") || shExpMatch(url, "*://facebook.com/*")) return 'SOCKS5 127.0.0.1:1080';
@@ -436,7 +449,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*.cnd.org*") || shExpMatch(url, "http://cnd.org*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*wiki.cnitter.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.cnn.com/video*") || shExpMatch(url, "http://cnn.com/video*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "http://*cn.news.cnyes.com*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*news.cnyes.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.code1984.com/64*") || shExpMatch(url, "http://code1984.com/64*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*comefromchina.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.coolaler.com*") || shExpMatch(url, "http://coolaler.com*")) return 'SOCKS5 127.0.0.1:1080';
@@ -464,6 +477,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*.dailidaili.com*") || shExpMatch(url, "http://dailidaili.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.dailymotion.com*") || shExpMatch(url, "http://dailymotion.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.dajiyuan.com*") || shExpMatch(url, "http://dajiyuan.com*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*.dajiyuan.eu*") || shExpMatch(url, "http://dajiyuan.eu*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*dalailama.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.dalailamaworld.com*") || shExpMatch(url, "http://dalailamaworld.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*dalianmeng.org*")) return 'SOCKS5 127.0.0.1:1080';
@@ -555,7 +569,6 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*www.eulam.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*eventful.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*eyevio.jp*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "http://*eyny.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.ezpc.tk/category/soft*") || shExpMatch(url, "http://ezpc.tk/category/soft*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.ezpeer.com*") || shExpMatch(url, "http://ezpeer.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.facebook.com*") || shExpMatch(url, "http://facebook.com*")) return 'SOCKS5 127.0.0.1:1080';
@@ -1000,6 +1013,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*iask.ca*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*iask.bz*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*ibiblio.org/pub/packages/ccic*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://cn.ibtimes.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*blogs.icerocket.com/tag*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*w.idaiwan.com/forum*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.identi.ca*") || shExpMatch(url, "http://identi.ca*")) return 'SOCKS5 127.0.0.1:1080';
@@ -1125,8 +1139,6 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*liu.lu*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.livestation.com*") || shExpMatch(url, "http://livestation.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*livestream.com*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "http://*cc9007.spaces.live.com*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "http://*chenyehao.spaces.live.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*china-green-party.spaces.live.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*flowerofhappiness.spaces.live.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*gufeng521.spaces.live.com*")) return 'SOCKS5 127.0.0.1:1080';
@@ -1287,6 +1299,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*.nrk.no*") || shExpMatch(url, "http://nrk.no*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*ntdtv.co*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*ntdtv.ca*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*ntdtv.org*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*ntdtv.ru*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*nuzcom.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.nytimes.com*") || shExpMatch(url, "http://nytimes.com*")) return 'SOCKS5 127.0.0.1:1080';
@@ -1507,6 +1520,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*seesmic.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*sejie.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.sendspace.com/file*") || shExpMatch(url, "http://sendspace.com/file*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://tweets.seraph.me/*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*sesawe.net*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.sesawe.org*") || shExpMatch(url, "http://sesawe.org*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*forum.setty.com.tw*")) return 'SOCKS5 127.0.0.1:1080';
@@ -1800,7 +1814,6 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*embr.in*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*guomin.us/login*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.srcf.ucam.org/salon/*") || shExpMatch(url, "http://srcf.ucam.org/salon/*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "http://*humanities.uchicago.edu/faculty/ywang/hi*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.udn.com*") || shExpMatch(url, "http://udn.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*ufreevpn.com*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.ugo.com*") || shExpMatch(url, "http://ugo.com*")) return 'SOCKS5 127.0.0.1:1080';
@@ -2107,6 +2120,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*search*%E4%B8%AD%E5%8A%9F*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*search*%E4%B8%AD%E5%9B%BD%E8%AE%BA%E5%9D%9B*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*search*%E4%B8%AD%E5%AE%A3%E9%83%A8*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "https://zh.wikipedia.org*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.wikipedia.org/wiki/Dalai_Lama*") || shExpMatch(url, "http://wikipedia.org/wiki/Dalai_Lama*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*.wikipedia.org/wiki/Dalai-Lama*") || shExpMatch(url, "http://wikipedia.org/wiki/Dalai-Lama*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*ar.wikipedia.org*%D8%AF%D8%A7%D9%84%D8%A7%D9%8A_%D9%84%D8%A7%D9%85%D8%A7*")) return 'SOCKS5 127.0.0.1:1080';
@@ -2132,6 +2146,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*zh.wikipedia.org/wiki/Wikipedia:%E9%A0%81%E9%9D%A2%E5%AD%98%E5%BB%A2%E8%A8%8E%E8%AB%96*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.m.wikipedia.org*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikisource.org*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*zh.wikipedia.org*2012%E5%B9%B4%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E8%85%90%E8%B4%A5%E6%A1%88%E4%BB%B6*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*512%E5%A4%A7%E5%9C%B0%E9%9C%87*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*08%E5%AE%AA%E7%AB%A0*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*1959%E5%B9%B4*")) return 'SOCKS5 127.0.0.1:1080';
@@ -2163,6 +2178,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E9%81%94%E8%98%AD%E8%96%A9%E6%8B%89*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E8%BE%BE%E5%B0%94%E7%BD%95%E6%B4%BB%E4%BD%9B*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%A4%A7%E8%B5%A6%E5%9B%BD%E9%99%85*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%A4%A7%E8%B5%A6%E5%9C%8B%E9%9A%9B*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%A4%A7%E5%B1%A0%E6%9D%80%E5%88%97%E8%A1%A8*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%A4%A7%E8%97%8F%E5%AF%BA*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%A4%A7%E6%98%AD%E5%AF%BA*")) return 'SOCKS5 127.0.0.1:1080';
@@ -2201,6 +2217,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*zh.wikipedia.org/wiki/%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%96%B0%E5%A1%98%E4%BA%8B%E4%BB%B6*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%9B%BD%E4%BF%9D*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E9%83%AD%E4%BC%AF%E9%9B%84*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%9B%BD%E9%99%85%E7%89%B9%E8%B5%A6%E7%BB%84%E7%BB%87*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%9B%BD%E5%86%85%E5%AE%89%E5%85%A8%E4%BF%9D%E5%8D%AB%E6%94%AF%E9%98%9F*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%9C%8B%E5%8B%99%E9%99%A2%E9%98%B2%E7%AF%84%E5%92%8C%E8%99%95%E7%90%86%E9%82%AA%E6%95%99%E5%95%8F%E9%A1%8C%E8%BE%A6%E5%85%AC%E5%AE%A4*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E9%9F%A9%E4%B8%9C%E6%96%B9*")) return 'SOCKS5 127.0.0.1:1080';
@@ -2282,10 +2299,12 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%88%98%E5%BB%B6%E4%B8%9C*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%88%98%E4%BA%91%E5%B1%B1*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E7%BE%85%E5%B9%B9*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*zh.wikipedia.org*%E7%BE%85%E5%B9%B2*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E6%B4%9B%E6%A1%91%E6%A3%AE%E6%A0%BC*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E7%B6%A0%E5%A3%A9%C2%B7%E8%8A%B1%E5%AD%A3%E8%AD%B7%E8%88%AA*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E7%BB%BF%E5%9D%9D%C2%B7%E8%8A%B1%E5%AD%A3%E6%8A%A4%E8%88%AA*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org/wiki/%e7%bb%bf%e5%9d%9d%e5%a8%98*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*zh.wikipedia.org*%E9%A6%AC%E4%B8%89%E5%AE%B6%E5%A5%B3%E5%AD%90%E5%8B%9E%E6%95%99%E6%89%80*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E9%A6%AC%E8%8B%B1%E4%B9%9D*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E7%BE%8E%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B0%91%E4%B8%BB%E5%9F%BA%E9%87%91%E4%BC%9A*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E6%95%8F%E6%84%9F%E4%BA%BA%E5%A3%AB*")) return 'SOCKS5 127.0.0.1:1080';
@@ -2410,7 +2429,7 @@ function FindProxyForURL(url, host) {
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E6%96%B0%E9%97%BB%E8%87%AA%E7%94%B1%E6%8E%A0%E5%A4%BA%E8%80%85*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E6%98%9F%E4%BA%91%E6%B3%95%E5%B8%88*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E7%86%8A%E7%84%B1*")) return 'SOCKS5 127.0.0.1:1080';
-	if (shExpMatch(url, "http://*zh.wikipedia.org/wiki/%E5%BE%90%E6%89%8D%E5%8E%9A*")) return 'SOCKS5 127.0.0.1:1080';
+	if (shExpMatch(url, "http://*zh.wikipedia.org*%E5%BE%90%E6%89%8D%E5%8E%9A*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E8%AE%B8%E5%AE%B6%E5%B1%AF*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E9%9B%AA%E5%B1%B1%E7%8D%85%E5%AD%90%E6%97%97*")) return 'SOCKS5 127.0.0.1:1080';
 	if (shExpMatch(url, "http://*zh.wikipedia.org*%E8%A9%A2%E5%95%8F%E8%99%95*")) return 'SOCKS5 127.0.0.1:1080';
@@ -2488,6 +2507,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?netflix\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?pandora\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?pure18\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?spotify\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?turntable\\.fm")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?vevo\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?0to255\\.com")) return 'SOCKS5 127.0.0.1:1080';
@@ -2546,6 +2566,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?aobo\\.com\\.au")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?aolchannels\\.aol\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?video\\.aol\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?apiary\\.io")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?apigee\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?areca-backup\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?army\\.mil")) return 'SOCKS5 127.0.0.1:1080';
@@ -2585,6 +2606,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blinkx\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blip\\.tv/")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blockcn\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blog\\.de")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blogcatalog\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blogger\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blog\\.kangye\\.org")) return 'SOCKS5 127.0.0.1:1080';
@@ -2674,6 +2696,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?ck101\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?classicalguitarblog\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?cmule\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?cms\\.gov")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?cna\\.com\\.tw")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?cnd\\.org/")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?cochina\\.org")) return 'SOCKS5 127.0.0.1:1080';
@@ -2704,13 +2727,11 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dabr\\.me")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dadazim\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dailidaili\\.com")) return 'SOCKS5 127.0.0.1:1080';
-	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dajiyuan\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dalailamaworld\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dalianmeng\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?danke4china\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?daxa\\.cn/")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?de-sci\\.org")) return 'SOCKS5 127.0.0.1:1080';
-	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?www\\.debugmode\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?delcamp\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?democrats\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?desc\\.se/")) return 'SOCKS5 127.0.0.1:1080';
@@ -2727,6 +2748,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dl-laby\\.jp")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dlsite\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dolc\\.de")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dollf\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dongtaiwang\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dongtaiwang\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?dontmovetochina\\.com")) return 'SOCKS5 127.0.0.1:1080';
@@ -2771,11 +2793,13 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^https?:\\/\\/[^\\/]+facebook\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?connect\\.facebook\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?facesofnyfw\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?faiththedog\\.info")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?falunhr\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?fanglizhi\\.info")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?fbcdn\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?famunion\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?fangbinxing\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?fanswong\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?favorious\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?faststone\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?favstar\\.fm")) return 'SOCKS5 127.0.0.1:1080';
@@ -2835,6 +2859,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?geohot\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?geometrictools\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?get-digital-help\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?getfoxyproxy\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?ggssl\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?giga-web\\.jp")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?gimpshop\\.com")) return 'SOCKS5 127.0.0.1:1080';
@@ -2876,6 +2901,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?h-china\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?hackthatphone\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?hakkatv\\.org\\.tw")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?hardsextube\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?hasaowall\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?hdtvb\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?heartyit\\.com")) return 'SOCKS5 127.0.0.1:1080';
@@ -2934,6 +2960,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?huping\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?hutianyi\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?hwinfo\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?i1\\.hk")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?i2p2\\.de/")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?i2runner\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?iask\\.ca")) return 'SOCKS5 127.0.0.1:1080';
@@ -2952,8 +2979,10 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?illusionfactory\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?ilove80\\.be")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?im\\.tv")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?im88\\.tw")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?imageflea\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?imagevenue\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?imagezilla\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?img\\.ly")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?imkev\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?incredibox\\.fr")) return 'SOCKS5 127.0.0.1:1080';
@@ -3030,6 +3059,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?liuxiaotong\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?livestream\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?livingonline\\.us")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?livingstream\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?livevideo\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lockdown\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lockestek\\.com")) return 'SOCKS5 127.0.0.1:1080';
@@ -3040,6 +3070,9 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lookpic\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lrfz\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lsd\\.org\\.hk")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lsm\\.org")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lsmchinese\\.org")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lsmkorean\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lupm\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?lvhai\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?mh4u\\.org")) return 'SOCKS5 127.0.0.1:1080';
@@ -3141,6 +3174,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?openvpn\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?openwebster\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?demo\\.opera-mini\\.net")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?orient-doll\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?orientaldaily\\.com\\.my")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?orn\\.jp")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?t\\.orzdream\\.com")) return 'SOCKS5 127.0.0.1:1080';
@@ -3171,6 +3205,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?peopo\\.org")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?perlhowto\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?photofocus\\.com")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?phuquocservices\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?img.*\\.picturedip\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?pin6\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?ping\\.fm/")) return 'SOCKS5 127.0.0.1:1080';
@@ -3234,6 +3269,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?www\\.getyouram\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?hiitch\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?radiovaticana\\.org")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?raidcall\\.com\\.tw")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?ranyunfei\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?rapidshare8\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?readingtimes\\.com\\.tw")) return 'SOCKS5 127.0.0.1:1080';
@@ -3256,6 +3292,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?salvation\\.org\\.hk")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?sankaizok\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?say2\\.info")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?scriptspot\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?secretgarden\\.no")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?default\\.secureserver\\.net")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?seevpn\\.com")) return 'SOCKS5 127.0.0.1:1080';
@@ -3472,7 +3509,6 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?stuffimreading\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?blog\\.summify\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?thedailywh\\.at")) return 'SOCKS5 127.0.0.1:1080';
-	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?thechangelog\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?theinternetwishlist\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?thisiswhyyouarefat\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?www\\.tiffanyarment\\.com")) return 'SOCKS5 127.0.0.1:1080';
@@ -3563,6 +3599,7 @@ function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?contests\\.twilio\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?embr\\.in")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?ucdc1998\\.org")) return 'SOCKS5 127.0.0.1:1080';
+	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?uderzo\\.it")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?udn\\.com")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?ukliferadio\\.co\\.uk")) return 'SOCKS5 127.0.0.1:1080';
 	if (regExpMatch(url, "^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?ultravpn\\.fr")) return 'SOCKS5 127.0.0.1:1080';
